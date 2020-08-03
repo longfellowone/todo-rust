@@ -1,0 +1,14 @@
+[package]
+name = "estimator"
+version = "0.1.0"
+authors = ["Matt Wright <mattwright3195@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+listenfd = "0.3"
+actix-web = "2"
+actix-rt = "1"
+async-graphql = "1"
+async-graphql-actix-web = "1"
+sqlx = { version = "0.3", features = [ "postgres" ] }
+anyhow = "1"
