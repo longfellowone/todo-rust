@@ -412,7 +412,7 @@ dependencies = [
  "thiserror",
  "tracing",
  "url",
- "uuid 0.8.1",
+ "uuid",
 ]
 
 [[package]]
@@ -907,19 +907,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "estimator"
-version = "0.1.0"
-dependencies = [
- "actix-rt",
- "actix-web",
- "anyhow",
- "async-graphql",
- "async-graphql-actix-web",
- "listenfd",
- "sqlx",
-]
-
-[[package]]
 name = "event-listener"
 version = "2.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1386,17 +1373,6 @@ name = "linked-hash-map"
 version = "0.5.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "8dd5a6d5999d9907cda8ed67bbd137d3af8085216c2ac62de5be860bd41f304a"
-
-[[package]]
-name = "listenfd"
-version = "0.3.3"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "492158e732f2e2de81c592f0a2427e57e12cd3d59877378fe7af624b6bbe0ca1"
-dependencies = [
- "libc",
- "uuid 0.6.5",
- "winapi 0.3.9",
-]
 
 [[package]]
 name = "lock_api"
@@ -2319,6 +2295,18 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "53953d2d3a5ad81d9f844a32f14ebb121f50b650cd59d0ee2a07cf13c617efed"
 
 [[package]]
+name = "todo"
+version = "0.1.0"
+dependencies = [
+ "actix-rt",
+ "actix-web",
+ "anyhow",
+ "async-graphql",
+ "async-graphql-actix-web",
+ "sqlx",
+]
+
+[[package]]
 name = "tokio"
 version = "0.2.22"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2514,15 +2502,6 @@ dependencies = [
  "idna",
  "matches",
  "percent-encoding",
-]
-
-[[package]]
-name = "uuid"
-version = "0.6.5"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e1436e58182935dcd9ce0add9ea0b558e8a87befe01c1a301e6020aeb0876363"
-dependencies = [
- "cfg-if",
 ]
 
 [[package]]
