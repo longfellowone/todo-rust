@@ -10,7 +10,11 @@ use async_graphql::http::{playground_source, GraphQLPlaygroundConfig};
 use async_graphql::{Context, EmptyMutation, EmptySubscription, FieldResult};
 use async_graphql::{Object, SimpleObject};
 use async_graphql_actix_web::{GQLRequest, GQLResponse};
+use meilisearch_sdk::{client::*, document::*, search::*};
+use serde::{Deserialize, Serialize};
 use sqlx::PgPool;
+use std::thread::sleep;
+use std::time::Duration;
 
 struct QueryRoot;
 
@@ -32,6 +36,21 @@ impl QueryRoot {
 
         Ok(assemblies)
     }
+    // async fn tasks(&self, _ctx: &Context<'_>) -> FieldResult<Vec<Task>> {
+    //     // let db_pool = ctx.data::<PgPool>()?;
+    //
+    //     let tasks = vec![Task {
+    //         id: 0,
+    //         area: "area".to_string(),
+    //         panel: "panel".to_string(),
+    //         task_type: "task_type".to_string(),
+    //         task: "task".to_string(),
+    //         status: "status".to_string(),
+    //         remaining_time: 0,
+    //     }];
+    //
+    //     Ok(tasks)
+    // }
 }
 
 #[SimpleObject]
@@ -55,8 +74,52 @@ async fn index_playground() -> actix_web::Result<HttpResponse> {
         )))
 }
 
+#[SimpleObject]
+#[derive(Serialize, Deserialize, Debug)]
+struct Task {
+    id: i32,
+    area: String,
+    panel: String,
+    task_type: String,
+    task: String,
+    status: String,
+    remaining_time: i32,
+}
+
+impl Document for Task {
+    type UIDType = i32;
+
+    fn get_uid(&self) -> &Self::UIDType {
+        &self.id
+    }
+}
+
 #[actix_rt::main]
 async fn main() -> anyhow::Result<()> {
+    // docker run -it --rm -p 7700:7700 getmeili/meilisearch:latest ./meilisearch --master-key=masterKey
+    let client = Client::new("http://localhost:7700", "masterKey");
+    let tasks_index = client.get_or_create("tasks").await.unwrap();
+
+    // let mut tasks = vec![];
+    //
+    // let mut rdr = csv::Reader::from_path("C:/Users/mattw/dev/todo-rust/todo/Todos.csv").unwrap();
+    // for row in rdr.deserialize() {
+    //     let task: Task = row?;
+    //     tasks.push(task);
+    // }
+    //
+    // tasks_index
+    //     .add_or_replace(&tasks, Some("id"))
+    //     .await
+    //     .unwrap();
+    //
+    // sleep(Duration::from_secs(1));
+
+    let query = Query::new("NAC");
+    let results = tasks_index.search::<Task>(&query).await.unwrap().hits;
+
+    results.iter().for_each(|task| println!("{:?}", task));
+
     let db_pool = PgPool::new("postgres://postgres:postgres@localhost/rust").await?;
 
     let schema = async_graphql::Schema::build(QueryRoot, EmptyMutation, EmptySubscription)

@@ -1,0 +1,326 @@
+﻿id,area,panel,task_type,task,status,remaining_time
+1,C1,1L2,Rough In,New Office corridoor switch (CCO-214),Ready,8
+2,C1,1L3,Rough In,Pull BX for walkway lighting,Ready,10
+3,C1,1P5,Rough In,Fish in HC door button (CCO-226) is CD?,Ready,3
+4,C1,1P7,Rough In,,Complete,8
+5,C1,Data,Rough In,Fix conduit below ceiling in office,Ready,2
+6,C1,1L3,Terminations,EM Light relay JB,Ready,12
+7,C1,1L3,Wire Pulling,,Ready,32
+8,C1,1P7,Wire Pulling,,Complete,16
+9,C1,EB5,Wire Pulling,Pull additional HR for DC head under stairs,Complete,2
+10,C1,FA,Wire Pulling,SLC,Complete,16
+11,C1,FA,Wire Pulling,NAC,Ready,16
+12,C1,LV,Wire Pulling,,Ready,40
+13,C1,1L3,Devices,Install DC heads,Blocked,10
+14,C1,1L3,Devices,Install Exits,Blocked,16
+15,C1,FA,Devices,Install horn/strobes,Ready,16
+16,C1,LV,Devices,Install devices,Blocked,40
+17,C1,None,Devices,Install and label coverplates,Blocked,24
+18,C1,None,Devices,Install outlets (Switched plugs red),Blocked,24
+19,C1,FA,Equipment,Mount FA annunciator,Complete,4
+20,C1,1L3,Fixtures,Install and wire light fixtures,Blocked,200
+21,C1,None,Fixtures,Install Z3 fixtures,Blocked,6
+22,C1,1P10,Rough In,2x Locker plugs,Blocked,4
+23,C1,1P5,Terminations,"UV-1, CUH-1 & 3",Blocked,6
+24,C1,1P6,Terminations,"DF-7, IAC-1 & 2",Blocked,8
+25,C1,1P7,Terminations,"CUH-11, CUH-16",Complete,4
+26,C1,DC,Terminations,Install battery pack,Blocked,10
+27,C1,None,Terminations,Wire OH door motors,Blocked,4
+28,C1,1P7,Equipment,Electrical panel,Complete,0
+29,C2,2L2,Conduit,Main entrance high roof lighting conduit,Complete,40
+30,C2,2L3,Conduit,Main entrance high roof lighting conduit,Ready,32
+31,C2,3M,Conduit,EF-6 power and RTU plug,Complete,4
+32,C2,3M,Conduit,2x HTS conduit + BX into units,Complete,4
+33,C2,None,Conduit,Remaining mechanical roof conduit,Complete,8
+34,C2,2P11,Terminations,"HTS-4, FC-4",Ready,5
+35,C2,2P6,Terminations,EF-11,Ready,2
+36,C2,2P7,Terminations,EF-12,Ready,2
+37,C2,2P8,Terminations,FC-1,Complete,2
+38,C2,2P11,Wire Pulling,"Pull 36 + (25,27,29)",Complete,2
+39,C2,2P8,Wire Pulling,Pull in CCT #43,Complete,2
+40,C2,2L3,Devices,Install DC heads,Ready,10
+41,C2,2L3,Devices,Install Exits,Ready,12
+42,C2,FA,Devices,Install all horn/strobes,Ready,16
+43,C2,LV,Devices,Install all devices,Ready,40
+44,C2,None,Devices,Install and label coverplates,Ready,24
+45,C2,None,Devices,Install outlets (Switched plugs red),Ready,24
+46,C2,2L2,Fixtures,Install and wire Multipurpose high roof light fixtures,Blocked,24
+47,C2,2L3,Fixtures,Install and wire light fixtures,Blocked,160
+48,C2,None,Fixtures,Install Z3 fixtures,Blocked,6
+49,C2,2P11,Rough In,2x Locker plugs,Blocked,4
+50,C2,2P8,Rough In,Install pop up plugs in millwork,Blocked,6
+51,C2,2P8,Terminations,4x Hand dryer,Blocked,4
+52,C2,DC,Terminations,Install battery pack,Blocked,5
+53,C2,None,Terminations,Wire OH door motors,Blocked,4
+54,C2,EB27,Wire Pulling,Pull DC heads above walkway,Blocked,2
+55,C2,2P8,Terminations,CUH-22,Complete,0
+56,W3,PA,Conduit,Install remaining PA speaker,Ready,3
+57,E1,1P14,Conduit,Install spec JB,Complete,3
+58,E1,None,Conduit,12x AV Monitors,Complete,24
+59,E1,PA,Conduit,Install 4x S3 PA speakers,Complete,4
+60,E1,Data,Rough In,Extend conduits to ceiling,Complete,0
+61,E1,LV,Rough In,Extend conduits to ceiling,Complete,0
+62,E1,PA,Rough In,Extend conduits to ceiling,Complete,2
+63,E1,1P12,Wire Pulling,Pull remaining JB,Complete,3
+64,E1,1P15,Conduit,Install spec JB,Starting Soon,3
+65,E1,1P16,Conduit,Install spec JB,Starting Soon,3
+66,E1,1P18,Conduit,EF-28 roof deck,Starting Soon,4
+67,E1,1P19,Conduit,Install spec JB,Starting Soon,3
+68,E1,1P19,Conduit,Run feed + jumpers from underground,Starting Soon,5
+69,E1,1P8,Conduit,12x DC Conduit,Starting Soon,12
+70,E1,2P12,Conduit,Remaining high roof,Starting Soon,12
+71,E1,6M1,Conduit,Remaining high roof,Starting Soon,8
+72,E1,None,Conduit,2x Projector wall,Starting Soon,10
+73,E1,None,Conduit,Conduit for VFDs (CCO-227),Starting Soon,16
+74,E1,SEC,Conduit,4x Glass breake sensors,Starting Soon,8
+75,E1,LV,Rough In,2x Switch,Starting Soon,2
+76,E1,None,Rough In,Raise OH Door wiring,Starting Soon,4
+77,E1,1L2,Conduit,Remaining conduit,Ready,16
+78,E1,1P15,Conduit,Roll blinds,Complete,12
+79,E1,1P18,Conduit,4x Drop cords,Ready,4
+80,E1,1P19,Conduit,2x Drop cords,Ready,2
+81,E1,1P19,Conduit,Install in wall JBs,Complete,7
+82,E1,1P8,Conduit,Roll blinds,Complete,8
+83,E1,1P9,Conduit,Complete conduit for RCs and install,Ready,16
+84,E1,1P9,Conduit,6x Drop cords,Ready,4
+85,E1,2P12,Conduit,Run remaining mechanical conduit,Complete,0
+86,E1,2P12,Conduit,Remaining low deck,Complete,8
+87,E1,6M1,Conduit,Remaining low deck,Complete,8
+88,E1,Data,Conduit,Complete remaininig PA/Clocks/Waps (Pickup shop PA spkr),Complete,16
+89,E1,EB28,Conduit,Extend conduit and wire,Ready,6
+90,E1,None,Conduit,Complete remaining FA and DC conduits,Complete,8
+91,E1,None,Conduit,Complete shutdown conduits,Complete,16
+92,E1,None,Conduit,2x Demo table outlets,Ready,6
+93,E1,1P18,Devices,6x Reel cords,Complete,6
+94,E1,FA,Devices,Install all horn/strobes,Ready,24
+95,E1,LV,Devices,Install all devices,Ready,64
+96,E1,None,Devices,Install and label coverplates,Ready,48
+97,E1,1L2,Fixtures,Install and wire light fixtures,Ready,240
+98,E1,1P16,Rough In,,Complete,40
+99,E1,1P17,Rough In,,Complete,40
+100,E1,1P18,Rough In,,Complete,40
+101,E1,1P19,Rough In,,Complete,40
+102,E1,1P8,Rough In,,Complete,40
+103,E1,Data,Rough In,ECCO-15 change to motion sensor locations,Complete,4
+104,E1,1L2,Terminations,EM Light relay JB,Ready,12
+105,E1,None,Terminations,Mount ground bar in Comm. 145,Ready,2
+106,E1,None,Terminations,Wire mechanical units,Ready,0
+107,E1,1L2,Wire Pulling,,Ready,32
+108,E1,EB10,Wire Pulling,Pull remaining,Complete,4
+109,E1,EB11,Wire Pulling,,Complete,6
+110,E1,EB8,Wire Pulling,Pull remaining,Complete,4
+111,E1,EB9,Wire Pulling,Pull remaining,Complete,5
+112,E1,FA,Wire Pulling,SLC,Complete,16
+113,E1,FA,Wire Pulling,NAC,Ready,16
+114,E1,1P14,Conduit,Install remaining JB,Complete,3
+115,E1,1P17,Conduit,Install spec JB,Complete,3
+116,E1,1P18,Conduit,Install spec JB,Complete,3
+117,E1,1P8,Conduit,Install spec JB,Complete,3
+118,E1,1P9,Conduit,Install spec JB,Complete,3
+119,E1,1L2,Devices,Install DC heads,Blocked,12
+120,E1,1L2,Devices,Install Exits,Blocked,24
+121,E1,None,Devices,Install outlets (Switched plugs red),Blocked,48
+122,E1,1P16,Equipment,Contactor panel,Complete,6
+123,E1,1P18,Equipment,Contactor panel,Complete,6
+124,E1,1P8,Equipment,Electrical panel,Complete,4
+125,E1,1P9,Equipment,Contactor panel,Complete,4
+126,E1,1P9,Equipment,Electrical panel,Complete,4
+127,E1,None,Fixtures,Install Z3 fixtures,Blocked,12
+128,E1,1L2,Rough In,Install potlights + S2 PA speakers,Complete,4
+129,E1,1P12,Rough In,2x Locker plugs,Blocked,8
+130,E1,1P12,Rough In,Install pop up plugs in millwork,Blocked,6
+131,E1,1P14,Rough In,,Complete,40
+132,E1,1P15,Rough In,,Complete,40
+133,E1,1P9,Rough In,,Complete,40
+134,E1,DC,Terminations,Install battery pack,Blocked,15
+135,E1,None,Terminations,Wire OH door motors,Blocked,16
+136,E1,None,Terminations,Wire east of EE OH door motors,Blocked,15
+137,E1,LV,Wire Pulling,,Blocked,80
+138,E1,1P15,Equipment,Electrical panel,Complete,0
+139,E2,2L3,Conduit,Lighting conduit in tbar,Complete,8
+140,E2,2P12,Conduit,Mechanical roof conduit in tbar + Hallway RTU outlet,Complete,16
+141,E2,6M1,Conduit,Mechanical roof conduit in tbar,Complete,8
+142,E2,FA,Conduit,FA SLC Conduit (4x smokes + duct smoke),Starting Soon,12
+143,E2,FA,Conduit,Mezz conduit,Starting Soon,16
+144,E2,2L3,Rough In,RM 208. Lighting + Extend conduits and bx out of bulkhead,Starting Soon,8
+145,E2,2L3,Conduit,,Complete,40
+146,E2,2L3,Conduit,Hallway lighting and LV conduit,Complete,48
+147,E2,2P12,Conduit,"3/4"" Flex in hallway for RTU outlet",Complete,3
+148,E2,6M1,Conduit,"2x 1"" from C2 to ER2",Complete,12
+149,E2,None,Conduit,2x Demo table outlets,Ready,6
+150,E2,FA,Devices,Install all horn/strobes,Ready,16
+151,E2,LV,Devices,Install all devices,Ready,40
+152,E2,None,Devices,Install and label coverplates,Ready,24
+153,E2,2L3,Fixtures,Install and wire light fixtures,Ready,200
+154,E2,2L3,Terminations,Splice 3x BO room lighting JBs,Ready,6
+155,E2,2P10,Terminations,Splice JBs,Complete,6
+156,E2,2P11,Terminations,Splice JBs,Complete,12
+157,E2,2P12,Terminations,Splice JBs,Complete,12
+158,E2,2P6,Terminations,Splice JBs,Complete,12
+159,E2,2P8,Terminations,Splice JBs,Complete,12
+160,E2,2P9,Terminations,Splice JBs,Complete,12
+161,E2,2P9,Terminations,Splice JBs,Complete,12
+162,E2,None,Terminations,Mount ground bar in Sever 212 (Use grounding bushing),Complete,2
+163,E2,None,Terminations,Mount ground bar in Elec. 212,Complete,2
+164,E2,None,Terminations,Wire mechanical units,Ready,0
+165,E2,2L3,Wire Pulling,South,Ready,48
+166,E2,2L3,Wire Pulling,North,Ready,40
+167,E2,2P10,Wire Pulling,"Pull 38,40,42,44",Complete,2
+168,E2,2P12,Wire Pulling,To JBs,Complete,10
+169,E2,LV,Wire Pulling,,Ready,80
+170,E2,2L3,Devices,Install DC heads,Blocked,10
+171,E2,2L3,Devices,Install Exits,Blocked,12
+172,E2,None,Devices,Install outlets (Switched plugs red),Blocked,32
+173,E2,2L3,Fixtures,Linear South,Blocked,80
+174,E2,2L3,Fixtures,Linear North,Blocked,80
+175,E2,2L3,Fixtures,Linear Hallway,Blocked,48
+176,E2,None,Fixtures,Install Z3 fixtures,Blocked,12
+177,E2,DC,Terminations,Install battery pack,Blocked,5
+178,E2,None,Terminations,Wire OH door motors,Blocked,20
+179,E2,2L3,Wire Pulling,Hallway,Blocked,24
+180,ER1,1L1,Conduit,Install EM contactor 24x24 JB,Ready,2
+181,ER1,1L1,Conduit,"Run 2x 2"" Conduit from furture outdoor lighting to panel",Ready,10
+182,ER1,FA,Conduit,Run 3x HR conduits from west block to JB,Ready,6
+183,ER1,FA,Equipment,Install FA panel + Battery pack + JB,Ready,6
+184,ER1,None,Grounding,Bond gas,Complete,2
+185,ER1,MTS,Rough In,Install panel,Complete,5
+186,ER1,FA,Terminations,Rough in ISO JB,Ready,12
+187,ER1,FA,Terminations,Tie in ISO JB,Ready,6
+188,ER1,LV,Conduit,Install panel equipment,Blocked,40
+189,ER1,None,Grounding,Bond water,Complete,2
+190,ER1,MDC,Terminations,Wire CTs for 2x client meter,Complete,7
+191,ER1,SDC-1,Terminations,Wire CTs for client meter,Complete,4
+192,ER1,MDC,Terminations,Panel,Complete,0
+193,ER1,MDC,Terminations,Megger feeders,Complete,0
+194,ER1,SDC-1,Terminations,Panel,Complete,0
+195,ER1,SDC-1,Terminations,Megger feeders,Complete,0
+196,ER1,1L1,Wire Pulling,Electrical room lights,Complete,0
+197,ER2,SDC-3,Conduit,Wire transformer,Complete,12
+198,ER2,SDC-2,Conduit,Wire transformer,Complete,12
+199,ER2,2L3,Equipment,Install guts,Complete,1
+200,ER2,2P10,Equipment,Install guts,Complete,1
+201,ER2,2P12,Equipment,Install guts,Complete,1
+202,ER2,6M1,Equipment,Install guts,Complete,1
+203,ER2,None,Terminations,Megger TX-2 + Remaining feeders,Complete,6
+204,ER2,SDC-2,Terminations,Panel,Complete,16
+205,ER2,SDC-2,Terminations,Megger feeders,Complete,2
+206,ER2,SDC-3,Terminations,Torque,Complete,3
+207,ER2,None,Conduit,Complete remaining 2x conduit,Complete,2
+208,ER2,None,Conduit,Install client metering and conduit,Complete,12
+209,ER2,None,Wire Pulling,Pull remaining 3x panel feeders,Complete,4
+210,ER2,SDC-3,Terminations,Panel,Complete,0
+211,J,FA,Terminations,Install 5x Duct smokes,Complete,7
+212,J,None,Fixtures,Install all outdoor light fixtures,Blocked,120
+213,J,PMT,Terminations,Torque seismic bolts,Complete,2
+214,N1,1P1,Rough In,Install outlet for irrigation,Complete,2
+215,N1,1L1,Terminations,Splice lighting JBs + Pull in dimming wire,Starting Soon,40
+216,N1,1P4,Conduit,Security door (CD-37 / CCO-110 R2 / ECCO 42),Ready,6
+217,N1,FA,Conduit,FA + Comms conduit to ELEV,Ready,12
+218,N1,None,Conduit,2x Demo table outlets,Ready,6
+219,N1,1L1,Devices,Install Exits,Complete,12
+220,N1,FA,Devices,Install all horn/strobes,Ready,16
+221,N1,LV,Devices,Install remaining devices,Ready,2
+222,N1,None,Devices,Install outlets (Switched plugs red),Ready,2
+223,N1,None,Devices,Install and label coverplates,Ready,2
+224,N1,1L1,Fixtures,Install and wire light fixtures,Ready,80
+225,N1,1P4,Rough In,Feed KEF,Complete,4
+226,N1,1L1,Terminations,EM Light relay JB,Ready,12
+227,N1,1P2,Terminations,Swap FC-12 breaker to 2p,Complete,1
+228,N1,1P4,Terminations,Kitchen hood fan contactors and FA,Ready,16
+229,N1,None,Terminations,Wire OH door motors,Complete,16
+230,N1,None,Terminations,Troubleshoot CUH-14,Ready,2
+231,N1,1P4,Wire Pulling,Servery,Complete,8
+232,N1,1P4,Wire Pulling,Servery cut down conduits and pull in wire,Ready,4
+233,N1,ELEV,Rough In,Install teck cable,Ready,4
+234,N1,1PC,Wire Pulling,,Ready,8
+235,N1,3M,Wire Pulling,Pull 4x split units,Complete,14
+236,N1,EB21,Wire Pulling,,Complete,7
+237,N1,LV,Wire Pulling,Add PC south of servery to N1 line (See C1 drawing),Ready,2
+238,N1,LV,Wire Pulling,Pickup storage room LV OCC,Ready,2
+239,N1,None,Fixtures,Install Z3 fixtures,Blocked,12
+240,N1,1P3,Rough In,2x Locker plugs,Blocked,4
+241,N1,1P3,Terminations,"Wire P-18, P-19",Blocked,4
+242,N1,1P3,Wire Pulling,Remaining pulls,Blocked,6
+243,N1,DC,Terminations,Install battery pack,Complete,0
+244,N2,2L1,Wire Pulling,Hallway,Complete,40
+245,N2,2L2,Conduit,"Complete 1x 1"" HR",Complete,6
+246,N2,6M1,Conduit,"Complete 2x 1"" HR",Complete,8
+247,N2,FA,Conduit,Elevator shaft heat detector and ceiling smoke,Ready,8
+248,N2,None,Conduit,"2x 1"" from 6M1 W2 to C2 + C2 Lighting HR",Complete,12
+249,N2,None,Conduit,2x Demo table outlets,Ready,6
+250,N2,None,Conduit,Switchleg to kitchen contactor,Complete,3
+251,N2,2L1,Devices,Install DC heads,Ready,2
+252,N2,2L1,Devices,Install Exits,Ready,2
+253,N2,FA,Devices,Install horn/strobes,Ready,6
+254,N2,LV,Devices,Install all devices,Ready,4
+255,N2,None,Devices,Install outlets (Switched plugs red),Ready,4
+256,N2,None,Devices,Install and label coverplates,Ready,24
+257,N2,2L1,Fixtures,Install remaining light fixtures,Ready,40
+258,N2,2L1,Rough In,CCO-181 New temp exit,Ready,16
+259,N2,2L1,Terminations,EM Light relay JB,Ready,12
+260,N2,None,Terminations,Wire OH door motors,Complete,16
+261,N2,2L1,Wire Pulling,Pull and splice remaining cirucits below deck,Ready,6
+262,N2,LV,Wire Pulling,Add OCC sensor to room 269,Ready,2
+263,N2,None,Fixtures,Install Z3 fixtures,Blocked,12
+264,N2,2P5,Rough In,Remaining HVAC wall (South) + EOL,Complete,6
+265,N2,2P5,Rough In,Elevevator furred out wall,Blocked,6
+266,N2,2P5,Rough In,2x Locker plugs,Blocked,4
+267,N2,2P5,Rough In,Install pop up plugs in millwork,Blocked,6
+268,N2,ELEV,Rough In,Run teck feeder + Splice JB,Blocked,5
+269,N2,2P4,Terminations,Wire 2x Fume hood,Complete,4
+270,N2,2P4,Terminations,"EF-20, EF-21",Complete,3
+271,N2,3M,Terminations,Install 2x contactor for fume hoods,Complete,3
+272,N2,ELEV,Terminations,Tie in feeder,Blocked,3
+273,N2,1P4,Wire Pulling,Run KEF SL to contactor from FA,Complete,4
+274,N2,DC,Terminations,Install battery pack,Complete,0
+275,P,None,Conduit,"Complete 5x 3"" conduits & Trimble",Complete,4
+276,P,1L1,Devices,Install parking lot lighting,Blocked,56
+277,P,1L1,Devices,Install 3x pull box,Blocked,18
+278,ROOF,1P4,Conduit,Sleeve condenser BX,Starting Soon,1
+279,ROOF,2L2,Conduit,Fix conduit removed to install window,Starting Soon,2
+280,ROOF,None,Devices,Install RTU outlets,Ready,40
+281,W2,2P3,Conduit,"Double draywall, bring panel out of wall before tie in",Ready,3
+282,W2,2L2,Devices,Install DC heads,Ready,10
+283,W2,FA,Devices,Install all horn/strobes,Ready,16
+284,W2,LV,Devices,Install all devices,Ready,40
+285,W2,None,Devices,Install outlets (Switched plugs red),Ready,32
+286,W2,None,Devices,Install Gym roof plugs & lv devices,Complete,6
+287,W2,None,Devices,Install and label coverplates,Ready,24
+288,W2,2L2,Fixtures,Install and wire Choral fixtures,Ready,16
+289,W2,2L2,Fixtures,Pull and install Choral fixtures,Ready,24
+290,W2,2L2,Fixtures,Install and wire light fixtures,Ready,80
+291,W2,2P3,Rough In,Pull 4x BX for door holders,Complete,4
+292,W2,None,Rough In,Wire basketball nets,Ready,24
+293,W2,2L2,Terminations,EM Light relay JB,Ready,12
+294,W2,2P1,Terminations,Splice UH-1,Ready,3
+295,W2,2P14,Terminations,"Splice EUH-1, EUH-2, EUH-3",Ready,7
+296,W2,2P2,Terminations,"FC-2, FC-5 ",Complete,4
+297,W2,2P3,Terminations,FC-3,Complete,2
+298,W2,2P3,Terminations,Splice new dryer fan (Confirm panel),Ready,2
+299,W2,DC,Terminations,Install battery pack,Ready,10
+300,W2,None,Terminations,Wire mechanical units,Ready,0
+301,W2,2L2,Wire Pulling,Choral,Ready,10
+302,W2,3M,Wire Pulling,4x AC/CU Teck cable and HRs,Complete,8
+303,W2,FA,Wire Pulling,Remaining SLC,Complete,8
+304,W2,FA,Wire Pulling,Remaining NAC,Ready,16
+305,W2,LV,Wire Pulling,Complete remaining,Ready,24
+306,W2,None,Conduit,New conduit for speakers (ESI-32),Complete,40
+307,W2,2L2,Devices,Install Exits,Blocked,12
+308,W3,2L2,Devices,Install DC heads,Complete,3
+309,W3,2L2,Devices,Install Exits,Complete,6
+310,W3,FA,Devices,Install all devices,Ready,10
+311,W3,LV,Devices,Install all devices,Ready,8
+312,W3,None,Devices,Install outlets (Switched plugs red),Complete,6
+313,W3,None,Devices,Install and label coverplates,Complete,24
+314,W3,2L2,Fixtures,Install and wire light fixtures,Complete,40
+315,W3,None,Terminations,Wire mechanical units,Complete,0
+316,W3,FA,Wire Pulling,NAC,Ready,6
+317,W3,FA,Wire Pulling,SLC,Ready,4
+318,W3,3P1,Rough In,Install panel and remaining rough in,Blocked,16
+319,W3,3P1,Rough In,Drama equipment,Blocked,80
+320,W3,DR,Rough In,Install panel,Blocked,6
+321,W3,3P1,Wire Pulling,Pull panel feeder,Blocked,6
+322,E1,None,Terminations,Wire shop equipment,Blocked,16
+323,W2,LV,Rough In,Wire to 3x plug loads,Complete,3
+324,E1,1L2,Wire Pulling,Pull battery packs,Ready,6
+325,N1,LV,Terminations,Add LCM in Servery for under stair light (1L1-21d),Ready,1
