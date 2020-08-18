@@ -97,25 +97,31 @@ impl Document for Task {
 #[actix_rt::main]
 async fn main() -> anyhow::Result<()> {
     // docker run -it --rm -p 7700:7700 getmeili/meilisearch:latest ./meilisearch --master-key=masterKey
+    // https://www.elastic.co/blog/found-keeping-elasticsearch-in-sync
+    // https://docs.rs/meilisearch-sdk/0.2.0/src/meilisearch_sdk/search.rs.html#152
+    // Soft delete records, exclude from search
+    // https://matklad.github.io/2020/08/12/who-builds-the-builder.html
+    // https://www.npmjs.com/package/dompurify
+
     let client = Client::new("http://localhost:7700", "masterKey");
     let tasks_index = client.get_or_create("tasks").await.unwrap();
 
-    // let mut tasks = vec![];
-    //
-    // let mut rdr = csv::Reader::from_path("C:/Users/mattw/dev/todo-rust/todo/Todos.csv").unwrap();
-    // for row in rdr.deserialize() {
-    //     let task: Task = row?;
-    //     tasks.push(task);
-    // }
-    //
-    // tasks_index
-    //     .add_or_replace(&tasks, Some("id"))
-    //     .await
-    //     .unwrap();
-    //
-    // sleep(Duration::from_secs(1));
+    let mut tasks = vec![];
 
-    let query = Query::new("NAC");
+    let mut rdr = csv::Reader::from_path("C:/Users/mattw/dev/todo-rust/todo/Todos.csv").unwrap();
+    for row in rdr.deserialize() {
+        let task: Task = row?;
+        tasks.push(task);
+    }
+
+    tasks_index
+        .add_or_replace(&tasks, Some("id"))
+        .await
+        .unwrap();
+
+    sleep(Duration::from_secs(1));
+
+    let query = Query::new("").with_filters("area = n1");
     let results = tasks_index.search::<Task>(&query).await.unwrap().hits;
 
     results.iter().for_each(|task| println!("{:?}", task));
