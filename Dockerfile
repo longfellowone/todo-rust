@@ -1,17 +1,21 @@
+# https://github.com/rust-lang/cargo/issues/2644
 FROM rust:1.45.2 AS builder
 WORKDIR /builder
 
-RUN USER=root cargo init
-COPY todo/Cargo.toml .
-RUN cargo build --release
+COPY todo/Cargo.toml Cargo.lock ./
+RUN set -x\
+ && mkdir -p src\
+ && echo "fn main() {println!(\"broken\")}" > src/main.rs\
+ && cargo build --release
 
 COPY todo/src ./src
-RUN cargo install --path .
+RUN set -x\
+ && find target/release/ -type f -executable -maxdepth 1 -delete\
+ && cargo build --release
 
-FROM rust:1.45.2
-#FROM rust:1.45.2-alpine
+FROM rust:1.45.2-slim
+COPY --from=builder /builder/target/release/todo .
 
-COPY --from=builder /usr/local/cargo/bin/todo .
 EXPOSE 8080
 
 CMD ["./todo"]

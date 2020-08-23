@@ -10,20 +10,12 @@ use async_graphql::http::{playground_source, GraphQLPlaygroundConfig};
 use async_graphql::{Context, EmptyMutation, EmptySubscription, FieldResult};
 use async_graphql::{Object, SimpleObject};
 use async_graphql_actix_web::{GQLRequest, GQLResponse};
-// use meilisearch_sdk::{client::*, document::*, search::*};
+use meilisearch_sdk::{client::*, document::*, search::*};
 use serde::{Deserialize, Serialize};
-use sqlx::postgres::PgQueryAs;
 use sqlx::PgPool;
 use std::env;
-// use std::thread::sleep;
-// use std::time::Duration;
-
-#[SimpleObject]
-#[derive(Debug, sqlx::FromRow)]
-struct Todo {
-    id: i32,
-    text: String,
-}
+use std::thread::sleep;
+use std::time::Duration;
 
 struct QueryRoot;
 
@@ -32,18 +24,8 @@ impl QueryRoot {
     async fn todos(&self, ctx: &Context<'_>) -> FieldResult<Vec<Todo>> {
         let db_pool = ctx.data::<PgPool>()?;
 
-        // let assemblies: Vec<Todo> = sqlx::query_as!(
-        //     Todo,
-        //     r#"
-        //         SELECT id, text
-        //         FROM todos
-        //     "#,
-        // )
-        // .fetch_all(db_pool)
-        // .await
-        // .unwrap();
-
-        let todos = sqlx::query_as::<_, Todo>(
+        let assemblies: Vec<Todo> = sqlx::query_as!(
+            Todo,
             r#"
                 SELECT id, text
                 FROM todos
@@ -53,7 +35,7 @@ impl QueryRoot {
         .await
         .unwrap();
 
-        Ok(todos)
+        Ok(assemblies)
     }
     // async fn tasks(&self, _ctx: &Context<'_>) -> FieldResult<Vec<Task>> {
     //     // let db_pool = ctx.data::<PgPool>()?;
@@ -70,6 +52,13 @@ impl QueryRoot {
     //
     //     Ok(tasks)
     // }
+}
+
+#[SimpleObject]
+#[derive(Debug)]
+struct Todo {
+    id: i32,
+    text: String,
 }
 
 type Schema = async_graphql::Schema<QueryRoot, EmptyMutation, EmptySubscription>;
@@ -98,13 +87,13 @@ struct Task {
     remaining_time: i32,
 }
 
-// impl Document for Task {
-//     type UIDType = i32;
-//
-//     fn get_uid(&self) -> &Self::UIDType {
-//         &self.id
-//     }
-// }
+impl Document for Task {
+    type UIDType = i32;
+
+    fn get_uid(&self) -> &Self::UIDType {
+        &self.id
+    }
+}
 
 #[actix_rt::main]
 async fn main() -> anyhow::Result<()> {
