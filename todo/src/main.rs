@@ -158,7 +158,7 @@ async fn main() -> anyhow::Result<()> {
     .run()
     .await?;
 
-    println!("Server started");
+    println!("Server started!");
 
     Ok(())
 }
