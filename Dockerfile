@@ -1,17 +1,20 @@
-FROM rust
+FROM rust:1.45.2 AS builder
 
-WORKDIR /usr/src/myapp
-COPY . .
+WORKDIR /builder
 
-RUN cargo install --path ./todo
+RUN USER=root cargo init
 
-CMD ["myapp"]
+COPY todo/Cargo.toml .
+COPY Cargo.lock .
 
-#RUN apt-get update && \
-#    apt-get upgrade -y && \
-#    rustup target add x86_64-unknown-linux-musl
+RUN cargo install --path .
 
-#VOLUME /code
-#WORKDIR /code
-#
-#ENTRYPOINT ["cargo"]
+COPY todo/src ./src
+
+RUN cargo install --path .
+
+FROM scratch
+
+COPY --from=builder /usr/local/cargo/bin/todo .
+
+CMD ["todo"]
