@@ -1,9 +1,7 @@
 steps:
   - name: 'gcr.io/cloud-builders/docker'
-    id: 'cargo'
-    args: ['build', '--tag=gcr.io/$PROJECT_ID/cargo', '.']
+    args: ['build', '--tag=gcr.io/$PROJECT_ID/todo', '.']
 
 timeout: 2400s
 
-images: ['gcr.io/$PROJECT_ID/cargo']
-tags: ['cloud-builders-community']
+images: ['gcr.io/$PROJECT_ID/todo']

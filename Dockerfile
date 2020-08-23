@@ -6,14 +6,13 @@ RUN USER=root cargo init
 
 COPY todo/Cargo.toml .
 COPY Cargo.lock .
-
-RUN cargo install --path .
+RUN cargo build --release
 
 COPY todo/src ./src
-
 RUN cargo install --path .
 
-FROM scratch
+#FROM scratch
+FROM alpine
 
 COPY --from=builder /usr/local/cargo/bin/todo .
 
