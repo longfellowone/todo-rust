@@ -1,9 +1,5 @@
 steps:
-  - name: 'rust'
-    id: 'cargo-build'
-    args: ['cargo', 'build', '--release']
   - name: 'gcr.io/cloud-builders/docker'
-    waitFor: ['cargo-build']
     args: ['build', '--tag=gcr.io/$PROJECT_ID/todo', '.']
 
 timeout: 2400s
