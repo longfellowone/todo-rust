@@ -13,6 +13,7 @@ use async_graphql_actix_web::{GQLRequest, GQLResponse};
 use meilisearch_sdk::{client::*, document::*, search::*};
 use serde::{Deserialize, Serialize};
 use sqlx::PgPool;
+use std::env;
 use std::thread::sleep;
 use std::time::Duration;
 
@@ -103,30 +104,33 @@ async fn main() -> anyhow::Result<()> {
     // https://matklad.github.io/2020/08/12/who-builds-the-builder.html
     // https://www.npmjs.com/package/dompurify
 
-    let client = Client::new("http://localhost:7700", "masterKey");
-    let tasks_index = client.get_or_create("tasks").await.unwrap();
+    // let client = Client::new("http://localhost:7700", "masterKey");
+    // let tasks_index = client.get_or_create("tasks").await.unwrap();
+    //
+    // let mut tasks = vec![];
+    //
+    // let mut rdr = csv::Reader::from_path("C:/Users/mattw/dev/todo-rust/todo/Todos.csv").unwrap();
+    // for row in rdr.deserialize() {
+    //     let task: Task = row?;
+    //     tasks.push(task);
+    // }
+    //
+    // tasks_index
+    //     .add_or_replace(&tasks, Some("id"))
+    //     .await
+    //     .unwrap();
+    //
+    // sleep(Duration::from_secs(1));
+    //
+    // let query = Query::new("").with_filters("area = n1");
+    // let results = tasks_index.search::<Task>(&query).await.unwrap().hits;
+    //
+    // results.iter().for_each(|task| println!("{:?}", task));
 
-    let mut tasks = vec![];
+    let db_pass = env::var("DB_PASS").unwrap();
+    let conn = format!("postgres://postgres:{}@35.185.200.15/rust", db_pass);
 
-    let mut rdr = csv::Reader::from_path("C:/Users/mattw/dev/todo-rust/todo/Todos.csv").unwrap();
-    for row in rdr.deserialize() {
-        let task: Task = row?;
-        tasks.push(task);
-    }
-
-    tasks_index
-        .add_or_replace(&tasks, Some("id"))
-        .await
-        .unwrap();
-
-    sleep(Duration::from_secs(1));
-
-    let query = Query::new("").with_filters("area = n1");
-    let results = tasks_index.search::<Task>(&query).await.unwrap().hits;
-
-    results.iter().for_each(|task| println!("{:?}", task));
-
-    let db_pool = PgPool::new("postgres://postgres:postgres@localhost/rust").await?;
+    let db_pool = PgPool::new(conn.as_str()).await?;
 
     let schema = async_graphql::Schema::build(QueryRoot, EmptyMutation, EmptySubscription)
         .data(db_pool)
@@ -139,7 +143,7 @@ async fn main() -> anyhow::Result<()> {
             .route("/", web::post().to(index))
             .route("/", web::get().to(index_playground))
     })
-    .bind("127.0.0.1:8000")?
+    .bind("127.0.0.1:8080")?
     .run()
     .await?;
 
