@@ -9,11 +9,13 @@ COPY Cargo.lock .
 RUN cargo build --release
 
 COPY todo/src ./src
-RUN cargo install --path .
+RUN cargo build --release
+#RUN cargo install --path .
 
 #FROM scratch
 FROM alpine
 
-COPY --from=builder /usr/local/cargo/bin/todo .
+COPY --from=builder /builder/target/release/todo .
+#COPY --from=builder /usr/local/cargo/bin/todo .
 
 CMD ["todo"]
